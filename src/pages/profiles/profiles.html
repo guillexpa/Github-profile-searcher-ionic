@@ -62,6 +62,13 @@
     </ion-row>
   </ion-card>
 
-  <ion-card></ion-card>
+  <ion-card *ngIf="repos">
+    <ion-list>
+      <ion-item *ngFor="let repo of repos" (click)="repoTapped($event, repo)">
+        <h2>{{repo.name}}</h2>
+        <p>{{repo.description}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 
 </ion-content>
