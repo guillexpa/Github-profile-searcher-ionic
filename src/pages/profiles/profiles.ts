@@ -37,6 +37,7 @@ export class ProfilesPage {
   reset(){
     this.profiles = '';
     this.github_user = '';
+    this.repos = '';
   }
 
   showRepos(github_user){
